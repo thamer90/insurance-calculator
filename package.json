@@ -1,0 +1,24 @@
+{
+  "name": "insurance-calculator",
+  "version": "1.0.0",
+  "description": "A life insurance calculator",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thamer90/insurance-calculator.git"
+  },
+  "author": "Thamer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thamer90/insurance-calculator/issues"
+  },
+  "homepage": "https://github.com/thamer90/insurance-calculator#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1"
+  }
+}

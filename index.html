@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Insurance Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body ng-controller="InsuranceController">
+
+  <div class="content-primary">
+    <form class="form-basic">
+      <div class="form-title-row">
+          <h1>Life Insurance Calculator</h1>
+      </div>
+
+      <div class="form-row">
+          <label>
+              <span>I am currently paying rent or mortgage.</span>
+              <input type="checkbox" ng-model="checked" ng-change="stateChanged()" aria-label="Toggle ngHide">
+          </label>
+      </div>
+
+      <div class="form-row check-element animate-show" ng-show="checked">
+          <label>
+              <span>How much outstanding rent or mortgage do you have?</span>
+              <input type="text" ng-model="funding.rent">
+          </label>
+      </div>
+
+      <div class="form-row">
+          <label>
+              <span>Do you have children, if so how many?</span>
+              <input type="text" ng-model="funding.children">
+          </label>
+      </div>
+
+      <div class="form-row">
+          <label>
+              <span>How much outstanding debt do you have?</span>
+              <input type="text" ng-model="funding.debt">
+          </label>
+      </div>
+
+      <div class="form-row">
+          <label>
+              Total: {{calculate()}}
+          </label>
+      </div>
+    </form>
+</div>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>
